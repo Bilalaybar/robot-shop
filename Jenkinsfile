@@ -8,7 +8,7 @@ pipeline {
       }
       stage('Deploy') {
         steps {
-            sh "helm upgrade --install robot-shop K8s/helm --namespace robot-shop"
+            sh "helm upgrade --install robot-shop K8s/helm --namespace=robot-shop"
             }
         }
       }
