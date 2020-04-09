@@ -8,7 +8,7 @@ pipeline {
       }
       stage('scan'){
         steps {
-          twistlockScan ca: '', cert: '', compliancePolicy: 'medium', containerized: true, dockerAddress: 'unix:///var/run/docker.sock', gracePeriodDays: 1, ignoreImageBuildTime: true, image: 'robotshop/rs-cart:latest', key: '', logLevel: 'true', requirePackageUpdate: false, timeout: 10
+          twistlockScan ca: '', cert: '', containerized: true, dockerAddress: 'unix:///var/run/docker.sock', gracePeriodDays: 1, ignoreImageBuildTime: true, image: 'robotshop/rs-cart:latest', key: '', logLevel: 'true', requirePackageUpdate: false, timeout: 10
         }
       }
       stage('Deploy') {
