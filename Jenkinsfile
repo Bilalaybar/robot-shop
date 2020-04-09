@@ -13,7 +13,7 @@ pipeline {
       }
       stage('publish'){
         steps {
-          twistlockPublish ca: '', cert: '', dockerAddress: 'unix:///var/run/docker.sock', ignoreImageBuildTime: false, image: 'robotshop/rs-cart:latest', key: '', logLevel: 'true', timeout: 10
+          twistlockPublish ca: '', cert: '', dockerAddress: 'unix:///var/run/docker.sock', ignoreImageBuildTime: true, image: 'robotshop/rs-cart', key: '', logLevel: 'true', timeout: 10
         }
       }
       stage('Deploy') {
